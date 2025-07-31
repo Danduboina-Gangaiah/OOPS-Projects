@@ -1,0 +1,74 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the first Number : ");
+		int f=sc.nextInt();
+		System.out.println("Enter the second Number : ");
+		int s=sc.nextInt();
+		System.out.println("CHOOSE THE CHOICE : ");
+		System.out.println("1.Addition ");
+		System.out.println("2.Subtraction ");
+		System.out.println("3.Multiplication ");
+		System.out.println("4.Division");
+		int choice=sc.nextInt();
+		switch(choice)
+		{
+		    case 1:
+		        Calculate add=new Addition();
+		        add.calculate(f,s);
+		        break;
+		    case 2:
+		        Calculate sub=new Subtraction();
+		        sub.calculate(f,s);
+		        break;
+		    case 3:
+		        Calculate mul=new Multiplication();
+		        mul.calculate(f,s);
+		        break;
+		    case 4:
+		        Calculate div=new Division();
+		        div.calculate(f,s);
+		        break;
+		    default:
+		    System.out.println("Please Enter the valid Choice !");
+		}
+	}
+}
+class Addition implements Calculate
+{
+    public void calculate(int x,int y)
+    {
+        System.out.println("Addition  is "+(x+y));
+    }
+}
+class Subtraction implements Calculate 
+{
+    public void calculate(int x,int y)
+    {
+        System.out.println("Subtraction  is "+(x-y));
+    }
+}
+class Multiplication implements Calculate
+{
+    public void calculate(int x,int y)
+    {
+        System.out.println("Multiplication is "+(x*y));
+    }
+}
+class Division implements Calculate
+{
+    public void calculate(int x,int y)
+    {
+        System.out.println("Division is "+(x/y));
+    }
+}
+interface Calculate
+{
+    void calculate(int a,int b);
+}
