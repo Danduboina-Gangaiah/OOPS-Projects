@@ -1,0 +1,40 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+abstract class Animal
+{
+    abstract void getSound();
+}
+class Dog extends Animal
+{
+    void getSound()
+    {
+        System.out.println("Bhowwwww");
+    }
+}
+class Cat extends Animal
+{
+    void getSound()
+    {
+        System.out.println("Meowwww");
+    }
+}
+class Cow extends Animal
+{
+    void getSound()
+    {
+        System.out.println("Ambaaa");
+    }
+}
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    Cow cw=new Cow();
+	    cw.getSound();
+	    Animal dg=new Dog();
+	    dg.getSound();
+	    Animal cat=new Cat();
+	    cat.getSound();
+	}
+}
